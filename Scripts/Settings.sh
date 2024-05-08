@@ -34,7 +34,6 @@ echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.defa
 ./scripts/feeds install -d y -p istore luci-app-store
 
 if [[ $WRT_URL == *"lede"* ]]; then
-	echo "CONFIG_PACKAGE_luci-app-ssr-plus=y" >> ./.config
 	echo "CONFIG_PACKAGE_luci-app-openclash=y" >> ./.config
 elif [[ $WRT_URL == *"immortalwrt"* ]]; then
 	echo "CONFIG_PACKAGE_luci=y" >> ./.config
